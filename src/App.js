@@ -6,6 +6,7 @@ function App() {
 
   const toggleHover = (currentState) => {
     setHover(currentState);
+    console.log(hover);
   };
   return <Navbar toggleHover={toggleHover}></Navbar>;
 }
