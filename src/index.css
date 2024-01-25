@@ -24,8 +24,8 @@ code {
 @layer components {
   .navbarcomp {
     /* -left-[250px] */
-    /* hover:translate-x-[250px] */
-    @apply flex flex-col absolute   transition ease-in-out delay-150 duration-300 bg-primary-color-dark  p-8 w-[300px] overflow-hidden hover:overflow-visible  h-full;
+    /* hover: */
+    @apply flex flex-col absolute   transition ease-in-out  duration-300 bg-primary-color-dark  p-8 w-[300px]  h-full;
   }
 
   .boardButton {
