@@ -15,15 +15,15 @@ function Navbar({ toggleHover }) {
 
   return (
     <div
-      className={`navbarcomp ${hidden ? "" : "-translate-x-[300px]"}`}
+      className={`navbarcomp ${hidden ? "-translate-x-[300px]" : ""}`}
       onMouseEnter={() => toggleHover(true)}
       onMouseLeave={() => toggleHover(false)}
     >
-      {!hidden && (
+      {hidden && (
         <button
           className=" absolute w-20 h-14 top-[80%] bg-dark-violet left-[100%] rounded-r-full"
           onClick={() => {
-            setHidden(true);
+            setHidden(false);
           }}
         >
           <ShowSidebar className="ml-8 text-workspace-bg-light"></ShowSidebar>
@@ -64,7 +64,7 @@ function Navbar({ toggleHover }) {
             <button
               className="ml-4 flex items-center group"
               onClick={() => {
-                setHidden(false);
+                setHidden(true);
               }}
             >
               <HideSidebar className="w-5 h-4 text-text-grey mr-4 group-hover:opacity-80"></HideSidebar>
