@@ -9,8 +9,6 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  flex-direction: row;
   height: 100vh;
 
   position: relative;
@@ -25,7 +23,7 @@ code {
   .navbarcomp {
     /* -left-[250px] */
     /* hover: */
-    @apply flex flex-col absolute   transition ease-in-out  duration-300 bg-primary-color-dark  p-8 w-[300px]  h-full;
+    @apply flex flex-col absolute   transition ease-in-out  duration-300 bg-primary-color-dark  p-8 w-[300px] h-full border-r-text-grey [border-width:1px];
   }
 
   .boardButton {

@@ -5,26 +5,20 @@ import CreateBoard from "./createBoard";
 import { ReactComponent as DarkIcon } from "../icons/dark.svg";
 import { ReactComponent as LightIcon } from "../icons/light.svg";
 import { ReactComponent as HideSidebar } from "../icons/hideSidebar.svg";
-import { useState } from "react";
 import CustomToggle from "./customToggle";
 import { ReactComponent as ShowSidebar } from "../icons/showSideBar.svg";
 
-function Navbar({ toggleHover }) {
+function Navbar({ hidden, toggleHidden }) {
   // will be used later to switch the theme
-  const [hidden, setHidden] = useState(false);
 
   return (
     <div
-      className={`navbarcomp ${hidden ? "-translate-x-[300px]" : ""}`}
-      onMouseEnter={() => toggleHover(true)}
-      onMouseLeave={() => toggleHover(false)}
+      className={`navbarcomp  z-10   ${hidden ? "-translate-x-[300px]" : ""} `}
     >
       {hidden && (
         <button
-          className=" absolute w-20 h-14 top-[80%] bg-dark-violet left-[100%] rounded-r-full"
-          onClick={() => {
-            setHidden(false);
-          }}
+          className=" absolute w-20 h-14 top-[90%] bg-dark-violet left-[100%] rounded-r-full"
+          onClick={() => toggleHidden(false)}
         >
           <ShowSidebar className="ml-8 text-workspace-bg-light"></ShowSidebar>
         </button>
@@ -63,9 +57,7 @@ function Navbar({ toggleHover }) {
           <div>
             <button
               className="ml-4 flex items-center group"
-              onClick={() => {
-                setHidden(true);
-              }}
+              onClick={() => toggleHidden(true)}
             >
               <HideSidebar className="w-5 h-4 text-text-grey mr-4 group-hover:opacity-80"></HideSidebar>
               <span className="text-text-grey group-hover:opacity-80">
