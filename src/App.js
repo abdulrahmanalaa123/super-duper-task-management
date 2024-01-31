@@ -9,7 +9,7 @@ function App() {
     setHidden(currentState);
   }
   return (
-    <div className="flex flex-row overflow-clip">
+    <div className="flex flex-row h-full">
       <Navbar hidden={hidden} toggleHidden={toggleHidden}></Navbar>
       <WorkSpace hidden={hidden}></WorkSpace>
     </div>

@@ -13,11 +13,13 @@ function Navbar({ hidden, toggleHidden }) {
 
   return (
     <div
-      className={`navbarcomp  z-10   ${hidden ? "-translate-x-[300px]" : ""} `}
+      className={`navbarcomp flex-none   ${
+        hidden ? "-translate-x-[300px]" : ""
+      } `}
     >
       {hidden && (
         <button
-          className=" absolute w-20 h-14 top-[90%] bg-dark-violet left-[100%] rounded-r-full"
+          className=" absolute w-20 h-14 top-[90%] z-[1] bg-dark-violet left-[100%] rounded-r-full"
           onClick={() => toggleHidden(false)}
         >
           <ShowSidebar className="ml-8 text-workspace-bg-light"></ShowSidebar>
