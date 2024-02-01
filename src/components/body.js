@@ -8,7 +8,7 @@ function Body({ hidden }) {
 
   return (
     <div
-      className={`flex-auto relative transition-all z-0 ease-in-out  duration-300 ${
+      className={`flex-auto flex-col relative transition-all z-0 ease-in-out  duration-300 ${
         hidden ? "-ml-[300px] duration-[240ms]" : ""
       }`}
     >

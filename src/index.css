@@ -21,6 +21,15 @@ code {
   height: 100%;
 }
 
+.gradientButton {
+  background: rgb(32, 33, 44);
+  background: linear-gradient(
+    0deg,
+    rgba(32, 33, 44, 1) 0%,
+    rgba(43, 44, 55, 1) 70%
+  );
+}
+
 @layer components {
   .navbarcomp {
     @apply flex flex-col relative  transition ease-in-out  duration-300 bg-primary-color-dark  p-8 w-[300px] grow-[1] shrink-[1] h-full border-r-text-grey [border-right-width:0.5px];
