@@ -9,7 +9,7 @@ function DropDownMenu({ showDropDown, setShowDropDown }) {
       <div
         className={`${
           showDropDown ? "opacity-100 visible" : "opacity-0 sr-only"
-        } transition-opacity absolute w-[200px] h-[100px] bg-workspace-bg-dark top-[60px] rounded-lg drop-shadow-md shadow-[#364e7e1a] p-4`}
+        } transition-opacity absolute w-[200px] h-[100px] bg-workspace-bg-dark top-[60px] rounded-lg drop-shadow-md z-50 shadow-[#364e7e1a] p-4`}
       >
         <ul>
           <li className="mb-4">
