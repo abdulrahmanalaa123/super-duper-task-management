@@ -10,7 +10,7 @@ module.exports = {
       "app-sky": "#49C4E5",
       "app-orange": "#E5A449",
       "app-blue": "#2A3FDB",
-      pink: "#20212C",
+      blackish: "#20212C",
       accentColor: "#645FC6",
 
       "workspace-bg-dark": "#20212C",
