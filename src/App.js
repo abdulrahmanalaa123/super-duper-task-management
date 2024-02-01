@@ -1,6 +1,6 @@
 import Navbar from "./components/navbar";
 import React, { useState } from "react";
-import WorkSpace from "./components/workspace";
+import Body from "./components/body";
 
 function App() {
   const [hidden, setHidden] = useState(false);
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="flex flex-row h-full">
       <Navbar hidden={hidden} toggleHidden={toggleHidden}></Navbar>
-      <WorkSpace hidden={hidden}></WorkSpace>
+      <Body hidden={hidden}></Body>
     </div>
   );
 }

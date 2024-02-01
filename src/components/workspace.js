@@ -1,55 +1,40 @@
-import { useState } from "react";
-
-import { ReactComponent as DropDown } from "../icons/dropdown.svg";
-
-function WorkSpace({ hidden }) {
-  const [showDropDown, setShowDropDown] = useState(false);
-
+function WorkSpace() {
   return (
+    // background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    // border-radius: 8px;
     <div
-      className={`flex-auto relative transition-all z-0 ease-in-out  duration-300 ${
-        hidden ? "-ml-[300px] duration-[240ms]" : ""
-      }`}
+      className={`h-[calc(100%-7rem)]   min-w-full bg-workspace-bg-dark px-8 py-12`}
     >
-      <div className="flex h-28 px-8 justify-between w-full bg-primary-color-dark [border-bottom-width:0.5px] border-b-text-grey">
-        <span className="self-center text-2xl text-workspace-bg-light ">
-          Platform Launch
-        </span>
-        <div className="self-center flex items-center relative">
-          <button className=" bg-dark-violet rounded-full px-4 py-3 text-workspace-bg-light [font-size: 15px]  hover:bg-highlight-color transition-colors duration-150">
-            + Add New Task
-          </button>
-          <button
-            className="ml-4 inline-block p-2 rounded-full hover:bg-blackish"
-            onClick={() => setShowDropDown(!showDropDown)}
-          >
-            <DropDown className="text-text-grey"></DropDown>
-          </button>
-          {
-            <div
-              className={`${
-                showDropDown ? "opacity-100 sr-only" : "opacity-0 "
-              } transition-opacity absolute w-[200px] h-[100px] bg-workspace-bg-dark top-[60px] rounded-lg drop-shadow-md shadow-[#364e7e1a] p-4`}
-            >
-              <ul>
-                <li className="mb-4">
-                  <button className="text-text-grey hover:text-opacity-80 transition-colors duration-150">
-                    Edit Task
-                  </button>
-                </li>
-                <li>
-                  <button className="text-[#ea5555] hover:text-opacity-80 transition-colors duration-150">
-                    Delete Task
-                  </button>
-                </li>
-              </ul>
-            </div>
-          }
-        </div>
-      </div>
-      <div
-        className={`h-[calc(100%-7rem)]   w-full bg-workspace-bg-dark`}
-      ></div>
+      <ul className="flex flex-row h-full gap-8">
+        <li>
+          <div className="flex items-center mb-4">
+            <div className="rounded-full w-4 h-4 bg-app-sky mr-4"></div>
+            <span className="text-text-grey font-bold text-[0.75rem] tracking-[2.4px]">
+              TODO(0)
+            </span>
+          </div>
+          <div className="h-full rounded-md w-72 border-dashed border-text-grey border-[1px]"></div>
+        </li>
+        <li>
+          <div className="flex items-center mb-4">
+            <div className="rounded-full w-4 h-4 bg-app-orange mr-4"></div>
+            <span className="text-text-grey font-bold text-[0.75rem] tracking-[2.4px]">
+              DOING(0)
+            </span>
+          </div>
+          <div className="h-full rounded-md w-72 border-dashed border-text-grey border-[1px]"></div>
+        </li>
+        <li>
+          <div className="flex items-center mb-4">
+            <div className="rounded-full w-4 h-4 bg-app-green mr-4"></div>
+            <span className="text-text-grey font-bold text-[0.75rem] tracking-[2.4px]">
+              DONE(0)
+            </span>
+          </div>
+          <div className="h-full rounded-md w-72 border-dashed border-text-grey border-[1px]"></div>
+        </li>
+        <button className="h-full rounded-md w-72 mt-[34px] bg-primary-color-dark"></button>
+      </ul>
     </div>
   );
 }
