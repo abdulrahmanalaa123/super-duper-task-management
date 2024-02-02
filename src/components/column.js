@@ -9,7 +9,7 @@ function Column({ color, name, children }) {
       </div>
       <div
         className={`h-full rounded-md w-72 border-dashed ${
-          children ? "" : "border-text-grey border-[1px]"
+          children ? "" : "dashedBorder"
         } `}
       >
         {children}
